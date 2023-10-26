@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+        <link rel="stylesheet" href="output.css">
+    </head>
+    <body>
+        <h1 class="w-full text-4xl font-bold text-center">ROBODOCT</h1>
+
+        <form
+            id="my-form"
+            class="w-full flex flex-col justify-center items-center gap-3 my-5"
+            action="formServer.html"
+            method="get"
+        >
+            <div
+                class="flex flex-col w-full justify-center items-center gap-[1.1rem]"
+            >
+                <label class="text-xl w-10/12 text-indigo-950" for="name"
+                    >Name</label
+                >
+                <input
+                    class="w-10/12 border-[0.1rem] rounded-[1.1rem] text-xl font-semibold p-[1.1rem] border-indigo-950"
+                    type="text"
+                    required
+                    id="name"
+                    name="name"
+                />
+            </div>
+
+            <div
+                class="flex flex-col w-full justify-center items-center gap-[1.1rem]"
+            >
+                <label class="text-xl w-10/12 text-indigo-950" for="age"
+                    >Age</label
+                >
+                <input
+                    class="w-10/12 border-[0.1rem] rounded-[1.1rem] text-xl font-semibold p-[1.1rem] border-indigo-950"
+                    type="number"
+                    required
+                    id="age"
+                    name="age"
+                />
+            </div>
+
+            <div
+                class="flex flex-col w-full justify-center items-center gap-[1.1rem]"
+            >
+                <label class="text-xl w-10/12 text-indigo-950" for="phone"
+                    >Phone</label
+                >
+                <input
+                    class="w-10/12 border-[0.1rem] rounded-[1.1rem] text-xl font-semibold p-[1.1rem] border-indigo-950"
+                    type="digit"
+                    required
+                    id="phone"
+                    name="phone"
+                />
+            </div>
+
+            <div
+                class="flex flex-col w-full justify-center items-center gap-[1.1rem]"
+            >
+                <label class="text-xl w-10/12 text-indigo-950" for="gender"
+                    >Gender</label
+                >
+                <select
+                    class="w-10/12 border-[0.1rem] rounded-[1.1rem] text-xl p-[1.1rem] border-indigo-950"
+                    id="gender"
+                    required
+                    name="gender"
+                >
+                    <option>Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Prefer Not Say</option>
+                </select>
+            </div>
+            <label class="text-xl w-10/12 text-indigo-950" for="more-content"
+                >Requirement</label
+            >
+            <div
+                class="flex flex-col w-full justify-center items-center gap-6 mt-3"
+            >
+                <div
+                    class="flex flex-row-reverse justify-evenly items-center flex-wrap w-10/12 border-[0.1rem] rounded-[1.1rem] p-[1.1rem] border-indigo-950"
+                >
+                    <input
+                        class="w-[5rem] border-[0.1rem] rounded-[1.1rem] text-xl font-semibold p-[1.1rem] border-indigo-950"
+                        type="radio"
+                        id="heart_rate"
+                        name="options"
+                        value="Heart Rate"
+                    />
+                    <label
+                        class="text-xl w-10/12 text-indigo-950 whitespace-nowrap"
+                        for="Heart Rate"
+                        >Heart Rate</label
+                    >
+                </div>
+                <div
+                    class="flex flex-row-reverse justify-evenly items-center flex-wrap w-10/12 border-[0.1rem] rounded-[1.1rem] p-[1.1rem] border-indigo-950"
+                >
+                    <input
+                        class="w-[5rem] border-[0.1rem] rounded-[1.1rem] text-3xl font-semibold p-[1.1rem] border-indigo-950"
+                        type="radio"
+                        id="sugar_level"
+                        name="options"
+                        value="Sugar Level"
+                    />
+                    <label
+                        class="text-xl w-10/12 text-indigo-950 whitespace-nowrap"
+                        for="Sugar Level"
+                        >Sugar Level</label
+                    >
+                </div>
+                <div
+                    class="flex flex-row-reverse justify-evenly items-center flex-wrap w-10/12 border-[0.1rem] rounded-[1.1rem] p-[1.1rem] border-indigo-950"
+                >
+                    <input
+                        class="w-[5rem] border-[0.1rem] rounded-[1.1rem] text-xl font-semibold p-[1.1rem] border-indigo-950"
+                        type="radio"
+                        id="o2_level"
+                        name="options"
+                        value="O2 Level"
+                    />
+                    <label
+                        class="text-xl w-10/12 text-indigo-950 whitespace-nowrap"
+                        for="Sugar Level"
+                        >O2 Level</label
+                    >
+                </div>
+                <div
+                    class="flex flex-row-reverse justify-evenly items-center flex-wrap w-10/12 border-[0.1rem] rounded-[1.1rem] p-[1.1rem] border-indigo-950"
+                >
+                    <input
+                        class="w-[5rem] border-[0.1rem] rounded-[1.1rem] text-xl font-semibold p-[1.1rem] border-indigo-950"
+                        type="radio"
+                        id="pulse_rate"
+                        name="options"
+                        value="Pulse Rate"
+                    />
+                    <label
+                        class="text-xl w-10/12 text-indigo-950 whitespace-nowrap"
+                        for="Pulse Rate"
+                        >Pulse Rate</label
+                    >
+                </div>
+                <div
+                    id="myModal"
+                    class="hidden flex-row-reverse justify-evenly items-center flex-wrap w-10/12 border-[0.1rem] rounded-[1.1rem] p-[1.1rem] border-indigo-950 hover:text-white hover:bg-indigo-950"
+                >
+                    <div class="modal-content">
+                        <p id="modal-text"></p>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-row-reverse justify-evenly items-center flex-wrap w-10/12 border-[0.1rem] rounded-[1.1rem] p-[1.1rem] border-indigo-950 hover:text-white hover:bg-indigo-950"
+                >
+                    <button
+                        id="submitForm"
+                        class="font-bold text-xl text-inherit"
+                    >
+                        Submit Form
+                    </button>
+                </div>
+            </div>
+        </form>
+        <script>
+            document
+                .getElementById("my-form")
+                .addEventListener("change", function (e) {
+                    if (e.target.name === "options") {
+                        var instructions;
+                        switch (e.target.value) {
+                            case "Heart Rate":
+                                instructions =
+                                    "To measure your heart rate please put your index finger on the sensor which is present on the chest of the robot.";
+                                break;
+                            case "Sugar Level":
+                                instructions =
+                                    "To measure your sugar level please pick a pin and sting in your finger tip. Cautiously put a drop of blood on the glass strip and insert it inside the robot chest .";
+                                break;
+                            case "O2 Level":
+                                instructions =
+                                    "To measure your O2 level  please wear the band on your wrist which is put on the hand of the robot";
+                                break;
+                            case "Pulse Rate":
+                                instructions =
+                                    "To measure your pulse rate  please wear the band on your wrist which is put on the hand of the robot";
+                                break;
+                        }
+                        document.getElementById("modal-text").textContent =
+                            instructions;
+                        document.getElementById("myModal").style.display =
+                            "flex";
+                    }
+                });
+
+            window.onclick = function (event) {
+                if (event.target == document.getElementById("myModal")) {
+                    document.getElementById("myModal").style.display = "none";
+                }
+            };
+        </script>
+    </body>
+</html>

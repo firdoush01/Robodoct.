@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Page</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="w-full">
+    <div class="p-4 w-full flex flex-col justify-center items-center">
+        <h1 class="text-5xl font-bold mb-16 w-full text-center">Report</h1>
+        <div class="w-11/12 flex flex-col gap-4 border-[1rem] border-indigo-950 rounded-[1.2rem] p-8">
+            <p class="w-10/12 flex flex-row flex-wrap justify-start items-start text-start text-3xl"><strong class="w-3/4 text-inherit">Name</strong> <span class="text-end" id="name"></span></p>
+            <p class="w-10/12 flex flex-row flex-wrap justify-start items-start text-start text-3xl"><strong class="w-3/4 text-inherit">Age</strong> <span class="text-end" id="age"></span></p>
+            <p class="w-10/12 flex flex-row flex-wrap justify-start items-start text-start text-3xl"><strong class="w-3/4 text-inherit">Phone Number</strong> <span class="text-end" id="phone"></span></p>
+            <p class="w-10/12 flex flex-row flex-wrap justify-start items-start text-start text-3xl"><strong class="w-3/4 text-inherit">Gender</strong> <span class="text-end" id="gender"></span></p>
+            <p class="w-10/12 flex flex-row flex-wrap justify-start items-start text-start text-3xl"><strong class="w-3/4 text-inherit">Options</strong> <span class="text-end" id="options"></span></p>
+        </div>
+    </div>
+    </body>
+    </html>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to get URL parameters
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+    
+            // Get values from URL parameters
+            var name = getParameterByName("name");
+            var age = getParameterByName("age");
+            var phone = getParameterByName("phone");
+            var gender = getParameterByName("gender");
+            var options = getParameterByName("options");
+    
+            // Populate the report with the values
+            document.getElementById('name').textContent = name;
+            document.getElementById('age').textContent = age;
+            document.getElementById('phone').textContent = phone;
+            document.getElementById('gender').textContent = gender;
+            document.getElementById('options').textContent = options;
+        });
+    </script>
+      
+</body>
+</html>
